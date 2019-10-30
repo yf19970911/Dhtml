@@ -1,0 +1,165 @@
+div.gridbox_dhx_skyblue{
+	border: 1px solid #e1e1e1;
+}
+div.gridbox .xhdr{
+	background: none;
+}
+div.gridbox_dhx_skyblue table.hdr {
+	border-collapse: collapse;
+	
+}
+div.gridbox_dhx_skyblue table.hdr tr{
+	background: none;
+}
+div.gridbox_dhx_skyblue table.obj{
+}
+div.gridbox_dhx_skyblue table.obj TR TD { 
+    font-family: '微软雅黑';
+    font-size: 14px; 
+    padding: 0; 
+    vertical-align: middle;
+    border: 0;
+    color: #222;
+} 
+
+div.gridbox_dhx_skyblue table.hdr td div.hdrcell{
+	padding:0;
+	width:auto;
+	text-align: center;
+}
+html > body /**/ div.gridbox_dhx_skyblue table.hdr td div.hdrcell{
+	width=100%;
+}
+div.gridbox_dhx_skyblue table.hdr td {
+	background-color: #fafafa;
+	height: 40px;
+	border: 0;
+	border-left: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+	font-family: '微软雅黑';
+	font-weight: normal;
+	color: #222;
+	font-size: 14px;
+	vertical-align:middle;
+	text-align:center;
+	padding: 0;
+}
+
+* html .gridbox_dhx_skyblue .obj td{
+    height:auto;
+    padding-top=3px;
+    padding-bottom=3px;
+}
+div.gridbox_dhx_skyblue table.obj.row20px tr  td{
+    padding-top:0px;
+    padding-bottom:0px;
+    height: 40px;
+}
+
+div.gridbox_dhx_skyblue table.obj.row20px tr  td.editable{
+    padding:0px;
+}
+div.gridbox_dhx_skyblue table.obj tr  td.editable div.treegrid_cell{
+	padding-left:4px;
+	padding-top:1px;
+}
+
+div.gridbox_dhx_skyblue table.obj tr td.rowhover {
+    border: 0;
+    background: #f4f4f4;
+}
+div.gridbox_dhx_skyblue table.obj tr.rowselected{
+	background-color:#ffefae;
+	background-image: none;
+}
+div.gridbox_dhx_skyblue table.obj tr.rowselected td,
+div.gridbox_dhx_skyblue table.obj tr.rowselected td.rowhover{
+	background-image: none;
+	background-color:#ffefae;
+	border-width: 1px 0 1px 0;
+	border-color: #fff;
+	border-style: dotted;
+	color: #222;
+}
+div.gridbox_dhx_skyblue table.obj.row20px tr.rowselected td,
+div.gridbox_dhx_skyblue table.obj.row20px tr.rowselected td.rowhover{
+	background-image: none;
+	background-color:#ffefae;
+	border-width: 1px 0 1px 0;
+	border-color: #fff;
+	border-style: dotted;
+}
+
+div.gridbox_dhx_skyblue table.obj tr.rowselected td.cellselected {
+	background-color:#ffefae;
+	border-width: 1px 0 1px 0;
+	border-color: #fff;
+	border-style: dotted;
+}
+div.gridbox_dhx_skyblue .odd_dhx_skyblue { 
+    background-color: #f4f4f4; 
+} 
+.dhx_combo_select, .gridbox_dhx_skyblue .dhx_combo_edit, .gridbox_dhx_skyblue .dhx_textarea{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 36px;
+}
+.gridbox_dhx_skyblue .dhx_combo_edit{
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 36px;
+}
+.gridbox_dhx_skyblue .dhx_sub_row {
+	background-color:transparent;
+}
+
+/* rowselector */
+div.gridbox table.obj.row20px tr td.rowselector,
+div.gridbox_dhx_skyblue table.obj tr td.rowselector {
+	line-height: normal;
+	border-right: 1px solid #A4BED4;
+	background-color: #E3EFFF;
+	vertical-align: top;
+	padding: 0px;
+}
+div.gridbox_dhx_skyblue table.obj tr td.rowselector div.rowselector2 {
+	line-height: normal;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url("../imgs/dhxgrid_dhx_skyblue/rowselector.png");
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+div.gridbox_dhx_skyblue table.obj tr td.rowselector div.rowselector2 div.rowselector3 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	line-height: normal;
+	background-image: url("../imgs/dhxgrid_dhx_skyblue/rowselector.png");
+	background-position: left top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+div.gridbox_dhx_skyblue table.obj tr td.rowselector div.rowselector2 div.rowselector4 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	line-height: normal;
+	background: none;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+div.gridbox_dhx_skyblue table.obj tr.rowselected td.rowselector div.rowselector2 div.rowselector4 {
+	background-image: url("../imgs/dhxgrid_dhx_skyblue/arrow.png");
+}
+div.gridbox_dhx_skyblue table.obj tr.rowselected td.rowselector.editmode div.rowselector2 div.rowselector4 {
+	background-image: url("../imgs/dhxgrid_dhx_skyblue/asteriks.png");
+}

@@ -1,0 +1,66 @@
+div.gridbox_dhx_sftj table.hdr tr{
+	background-position:0px -1px\9;
+}
+body:nth-of-type(1) div.gridbox_dhx_sftj table.hdr tr{
+	background-position:0px -1px;
+}
+
+div.gridbox_dhx_sftj table.obj tr td{
+	font-family:Tahoma;
+	font-size:11px;
+	border-width: 1px 1px 1px 1px;
+	border-color : white Gray Gray white;
+	padding-right:4px;
+	padding-left:4px;
+}
+div.gridbox_dhx_sftj table.hdr td div.hdrcell{
+	width:auto;
+	padding-left:1px;
+	padding-right:1px;
+	width:100% !ie;
+}
+
+div.gridbox_dhx_sftj {
+  border:1px solid  #000000;
+}
+div.gridbox table.obj tr  td{
+    padding-top:3px;
+    padding-bottom:3px;
+}
+div.gridbox table.obj.row20px tr  td{
+	height:20px;
+    padding-top:0px;
+    padding-bottom:0px;
+}
+
+
+div.gridbox table.obj tr  td.editable{
+    padding:0px;
+}
+div.gridbox table.obj tr  td.editable div.treegrid_cell{
+	padding-left:4px;
+	padding-top:1px;
+}
+div.gridbox_dhx_sftj table.obj tr.rowselected{
+	background-color:#FFF1CC;
+}
+div.gridbox_dhx_sftj table.obj tr.rowselected td{
+
+	background-repeat:repeat-x;
+	background-position:0px 0px;	
+}
+div.gridbox_dhx_sftj table.obj.row20px tr.rowselected td{
+	background-repeat:repeat-x;
+	background-position:0px 0px;	
+}
+
+.dhx_combo_select, .gridbox_dhx_sftj .dhx_combo_edit, .gridbox_dhx_sftj .dhx_textarea{
+    font-family:Tahoma;
+    font-size:11px;
+}
+.gridbox_dhx_sftj .dhx_combo_edit{
+	padding:1px 0px 1px 1px;
+}
+.gridbox_dhx_sftj .dhx_sub_row {
+	background-color:transparent;
+}

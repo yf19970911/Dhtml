@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.yf.mapper.UserMapper">
+
+    <select id="getAllUser" resultType="User">
+        SELECT * from t_user
+    </select>
+
+    <select id="getUserByYhdm" resultType="User">
+        SELECT * FROM t_user where yhdm = #{yhdm}
+    </select>
+
+    <select id="getUserByYhbm" resultType="User">
+        SELECT * FROM t_user where yhbm = #{yhbm}
+    </select>
+
+    <select id="getUserByYhdmAndYhbm" resultType="User">
+        SELECT * FROM t_user where yhbm = #{yhbm} and yhdm = #{yhdm}
+    </select>
+
+    <delete id="deleteUserByYhdm" parameterType="String">
+        DELETE from t_user where yhdm = #{yhdm}
+    </delete>
+
+    <insert id="addUser" parameterType="User">
+        INSERT INTO t_user values(#{yhdm},#{yhxm},#{yhbm},#{bs},#{sfjy},#{pxh})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update t_user set yhxm=#{yhxm},yhbm=#{yhbm},bs=#{bs},sfjy=#{sfjy},pxh=#{pxh} where yhdm=#{yhdm}
+    </update>
+
+</mapper>
