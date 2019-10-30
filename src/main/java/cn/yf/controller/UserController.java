@@ -8,9 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.util.ArrayList;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 
@@ -22,43 +21,43 @@ public class UserController {
 
     @ResponseBody
     @RequestMapping("getAllUser")
-    public Map<String,Object> getAllUser(){
+    public Map<String,Object> getAllUser(HttpServletRequest request){
         List<User> users = userService.getAllUser();
-        Map<String,Object> map = GridUtil.listToMap(users);
+        Map<String,Object> map = GridUtil.listToMap(users,request);
         return map;
     }
 
     @ResponseBody
     @RequestMapping("getUserByYhdm")
-    public Map<String,Object> getUserByYhdm(@Param("yhdm") String yhdm){
+    public Map<String,Object> getUserByYhdm(@Param("yhdm") String yhdm,HttpServletRequest request){
         List<User> users = userService.getUserByYhdm(yhdm);
-        Map<String,Object> map = GridUtil.listToMap(users);
+        Map<String,Object> map = GridUtil.listToMap(users,request);
         return map;
     }
 
     @ResponseBody
     @RequestMapping("getUserByYhbm")
-    public Map<String,Object> getUserByYhbm(@Param("yhbm") String yhbm){
+    public Map<String,Object> getUserByYhbm(@Param("yhbm") String yhbm,HttpServletRequest request){
         List<User> users;
         if("1".equals(yhbm)){
             users = userService.getAllUser();
         }else {
             users = userService.getUserByYhbm(yhbm);
         }
-        Map<String,Object> map = GridUtil.listToMap(users);
+        Map<String,Object> map = GridUtil.listToMap(users,request);
         return map;
     }
 
     @ResponseBody
     @RequestMapping("getUserByYhdmAndYhbm")
-    public Map<String,Object> getUserByYhdmAndYhbm(@Param("yhdm") String yhdm,@Param("yhbm") String yhbm){
+    public Map<String,Object> getUserByYhdmAndYhbm(@Param("yhdm") String yhdm,@Param("yhbm") String yhbm,HttpServletRequest request){
         List<User> users;
         if("".equals(yhbm) || null == yhbm || "1".equals(yhbm)){
             users = userService.getUserByYhdm(yhdm);
         }else{
             users = userService.getUserByYhdmAndYhbm(yhdm,yhbm);
         }
-        Map<String,Object> map = GridUtil.listToMap(users);
+        Map<String,Object> map = GridUtil.listToMap(users,request);
         return map;
     }
 

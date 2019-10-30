@@ -28,6 +28,8 @@
     <script src="js/dhtmlxtree.js"></script>
     <script src="js/jquery-1.4.4.min.js"></script>
     <script src="js/jquery.ztree.core.js"></script>
+    <script src="js/dhtmlxgrid_excell_grid.js"></script>
+    <script src="js/dhtmlxgrid_excell_link.js"></script>
     <style>
         #top{
             height: 15%;
@@ -161,12 +163,12 @@
                     <input id="name" name="name" type="text">
                 </div>
                 <div id="query"><button class="btn btn-default">查询</button></div>
-                <div id="update">
-                    <button class="btn btn-default" onclick="showUpdate()">修改用户</button>
-                </div>
-                <div id="delete">
-                    <button class="btn btn-default" onclick="showDelete();">删除用户</button>
-                </div>
+                <%--<div id="update">--%>
+                    <%--<button class="btn btn-default" onclick="showUpdate()">修改用户</button>--%>
+                <%--</div>--%>
+                <%--<div id="delete">--%>
+                    <%--<button class="btn btn-default" onclick="showDelete();">删除用户</button>--%>
+                <%--</div>--%>
                 <div id="add">
                     <button class="btn btn-default box" onclick="showAdd()">添加用户</button>
                 </div>
@@ -342,9 +344,10 @@
     var mygrid;
     mygrid = new dhtmlXGridObject("gridBox");
     mygrid.setImagePath("imgs/");
-    mygrid.setHeader("用户代码,用户姓名,用户部门,标识,是否禁用,排序号");
-    mygrid.setInitWidthsP("10,*,15,20,10,15");
-    mygrid.setColAlign("center,center,center,center,center,center");
+    mygrid.setHeader("用户代码,删除,编辑,用户姓名,用户部门,标识,是否禁用,排序号");
+    mygrid.setInitWidthsP("10,8,8,*,15,20,10,15");
+    mygrid.setColAlign("center,center,center,center,center,center,center,center");
+    mygrid.setColTypes("ro,link,img,ro,ro,ro,ro,ro");
     mygrid.setSkin("dhx_skyblue");
     mygrid.init();
     mygrid.load("getAllUser","json");
@@ -492,6 +495,9 @@
         return true;
     }
 
+    function update() {
+        showUpdate();
+    }
 
 </script>
 </html>
